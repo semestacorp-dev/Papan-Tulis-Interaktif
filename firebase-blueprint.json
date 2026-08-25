@@ -1,0 +1,69 @@
+{
+  "entities": {
+    "users": {
+      "title": "Users",
+      "description": "User accounts (Teachers, Students, BGTK Dinas Pendidikan Officials)",
+      "fields": {
+        "email": { "type": "string" },
+        "displayName": { "type": "string" },
+        "role": { "type": "string", "enum": ["teacher", "student", "bgtk_admin"] },
+        "school": { "type": "string" },
+        "nip": { "type": "string" },
+        "photoURL": { "type": "string" },
+        "createdAt": { "type": "timestamp" }
+      }
+    },
+    "whiteboard_sessions": {
+      "title": "Whiteboard Sessions",
+      "description": "Interactive whiteboard sessions for live classroom presentation",
+      "fields": {
+        "title": { "type": "string" },
+        "roomCode": { "type": "string" },
+        "subject": { "type": "string" },
+        "gradeLevel": { "type": "string" },
+        "teacherId": { "type": "string" },
+        "teacherName": { "type": "string" },
+        "school": { "type": "string" },
+        "currentSlideIndex": { "type": "number" },
+        "slides": { "type": "array" },
+        "elements": { "type": "array" },
+        "allowStudentDrawing": { "type": "boolean" },
+        "activeDriveFile": { "type": "object" },
+        "status": { "type": "string", "enum": ["active", "archived"] },
+        "createdAt": { "type": "timestamp" },
+        "updatedAt": { "type": "timestamp" }
+      }
+    },
+    "materi_pembelajaran": {
+      "title": "Materi Pembelajaran",
+      "description": "Educational materials, slide decks, Google Drive links, and interactive learning media",
+      "fields": {
+        "title": { "type": "string" },
+        "description": { "type": "string" },
+        "subject": { "type": "string" },
+        "grade": { "type": "string" },
+        "driveFileId": { "type": "string" },
+        "driveEmbedUrl": { "type": "string" },
+        "slides": { "type": "array" },
+        "curriculumCategory": { "type": "string" },
+        "authorName": { "type": "string" },
+        "authorId": { "type": "string" },
+        "tags": { "type": "array" },
+        "createdAt": { "type": "timestamp" }
+      }
+    },
+    "quizzes": {
+      "title": "Interactive Quizzes",
+      "description": "Live quizzes and quick polls for students on the interactive whiteboard",
+      "fields": {
+        "sessionId": { "type": "string" },
+        "question": { "type": "string" },
+        "options": { "type": "array" },
+        "correctAnswer": { "type": "number" },
+        "isActive": { "type": "boolean" },
+        "submissionsCount": { "type": "number" },
+        "createdAt": { "type": "timestamp" }
+      }
+    }
+  }
+}

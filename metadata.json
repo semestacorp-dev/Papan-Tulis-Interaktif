@@ -1,0 +1,6 @@
+{
+  "name": "BGTK Dinas Pendidikan Kota Metro - Papan Tulis Interaktif",
+  "description": "Aplikasi BGTK Dinas Pendidikan Kota Metro terintegrasi papan tulis interaktif dan Google Drive untuk menampilkan materi pembelajaran real-time bagi guru dan siswa di kelas.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
